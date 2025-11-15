@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global SCI-Fest 2.0</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: linear-gradient(to bottom, #003366, #0055a5, #0077cc);
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating animated background */
+    .float { position: absolute; width: 20px; height: 20px; background: rgba(255,140,0,0.25); border-radius: 50%; filter: blur(3px); animation: float 10s infinite ease-in-out; }
+    @keyframes float { 0% { transform: translateY(0) translateX(0); } 50% { transform: translateY(-40px) translateX(20px); } 100% { transform: translateY(0) translateX(0); } }
+
+    header { padding: 100px 20px; text-align: center; }
+    header h1 { 
+      font-size: 3.5rem; 
+      background: linear-gradient(90deg, #ff6600, #ffcc00, #ffffff); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      animation: shine 4s linear infinite; 
+    }
+    @keyframes shine { 
+      from { background-position: 0 0; } 
+      to { background-position: 200% 0; } 
+    }
+
+    .subtitle { margin-top: 15px; font-size: 1.3rem; color: #ffe0b3; }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    h2 { font-size: 2rem; margin-bottom: 20px; text-shadow: 0 0 10px #ff9933; }
+    p, li { line-height: 1.6; font-size: 1rem; opacity: 0.95; }
+
+    .info-box {
+      background: rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .info-box:hover { transform: translateY(-5px) rotate(-1deg); box-shadow: 0 0 25px rgba(255,140,0,0.55); }
+
+    /* Scroll animation */
+    .info-box.visible { opacity: 1; transform: translateY(0); }
+
+    .register-section { text-align: center; margin-top: 40px; }
+    .selector { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+    .card { 
+      width: 250px; padding: 25px; 
+      background: rgba(255,255,255,0.1); 
+      border-radius: 18px; 
+      border: 2px solid rgba(255,255,255,0.2); 
+      text-align: center; cursor: pointer; 
+      transition: 0.3s; 
+    }
+    .card:hover { transform: scale(1.07) rotate(1deg); box-shadow: 0 0 40px rgba(255,140,0,0.6); }
+
+    footer { text-align: center; padding: 30px; margin-top: 50px; opacity: 0.7; font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      .card { width: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating elements -->
+<div class="float" style="left:10%; top:20%; animation-duration:12s;"></div>
+<div class="float" style="left:80%; top:50%; animation-duration:9s;"></div>
+<div class="float" style="left:50%; top:80%; animation-duration:14s;"></div>
+<div class="float" style="left:30%; top:10%; animation-duration:11s;"></div>
+
+<header>
+  <h1>Global SCI-Fest 2.0</h1>
+  <p class="subtitle">"The science of tomorrow, today" — Organized by GSS Science & Innovation Club</p>
+</header>
+
+<section>
+  <div class="info-box">
+    <h2>About the Event</h2>
+    <p>Global SCI-Fest 2.0 is a one-day national-level science celebration featuring Olympiad exams, treasure hunts, exhibitions, and interactive experiences. The event is designed for students of grades 9–12 to test academic excellence and logical problem-solving skills.</p>
+  </div>
+
+  <div class="info-box">
+    <h2>Program Outline</h2>
+    <ul>
+      <li><strong>Date:</strong> Mangsir 26 (Friday)</li>
+      <li><strong>Venue:</strong> Global School of Science Premises</li>
+      <li><strong>Start Time:</strong> 8:00 AM sharp</li>
+      <li><strong>Activities:</strong> Olympiad Exam, Treasure Hunt, Science Stalls, Food Stalls, Student Creations Showcase</li>
+      <li><strong>Audience:</strong> Schools and colleges from across the country, free entry for visitors</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h2>Registration Fees</h2>
+    <p><strong>Grades 9 & 10:</strong> Rs. 500 per team (3 members)</p>
+    <p><strong>Grades 11 & 12:</strong> Rs. 750 per team (3 members)</p>
+  </div>
+
+  <div class="info-box">
+    <h2>Prizes</h2>
+    <p><strong>Grades 9 & 10:</strong> 1st: Rs. 15,000 | 2nd: Rs. 7,000 | 3rd: Rs. 4,000</p>
+    <p><strong>Grades 11 & 12:</strong> 1st: Rs. 18,000 | 2nd: Rs. 10,000 | 3rd: Rs. 6,000</p>
+  </div>
+</section>
+
+<section class="register-section">
+  <h2>Register Now</h2>
+  <p>Choose your grade category to fill out the official Google Form.</p>
+
+  <div class="selector">
+    <div class="card" onclick="window.location.href='https://docs.google.com/forms/d/e/FORM_ID_9_10/viewform'">
+      <h3>Class 9 & 10 — Rs. 500/team</h3>
+    </div>
+
+    <div class="card" onclick="window.location.href='https://docs.google.com/forms/d/e/FORM_ID_11_12/viewform'">
+      <h3>Class 11 & 12 — Rs. 750/team</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  For inquiries: 9702910567 | 9866228370 | 9841548285<br>
+  Email: sci.innovationclub@globalcollege.edu.np<br>
+  Instagram: gss.scienceclub<br>
+  © 2025 GSS Science & Innovation Club
+</footer>
+
+<script>
+  // Scroll animation for info-boxes
+  const boxes = document.querySelectorAll('.info-box');
+  window.addEventListener('scroll', () => {
+    boxes.forEach(box => {
+      const rect = box.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        box.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
